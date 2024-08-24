@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/fragments/Navbar";
 
 const font = Poppins({
   subsets: ["latin"],
@@ -22,6 +23,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Navbar />
           {children}
         </ThemeProvider>
       </body>
